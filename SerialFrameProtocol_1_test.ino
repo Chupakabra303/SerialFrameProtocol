@@ -3,8 +3,6 @@
 
 SerialFrameProtocol SFP(SFPport);
 
-
-
 void setup() {
   SFPport.begin(57600);
   delay(2000);
@@ -12,10 +10,7 @@ void setup() {
   SFP.logPrint("Serial инициализирован");
 	//for (int i = 0; i < FRAME_BUFF_SIZE; ++i)
 	//	SFPport.print(SFP.frameBuffer[i], HEX);
-
-
 }
-
 
 constexpr uint32_t DATA_SIZE = 300;
 int32_t iVal = 54321;
@@ -26,7 +21,6 @@ void customFrame() {
 	SFP.print("Это часть фрейма ");
 	SFP.print("iVal=" + String(iVal) + "; fVal=" + String(fVal));
 }
-
 
 void loop() {
 //	SFP.frameStart("TEST"); // код команды передачи массива ВАХ
@@ -82,7 +76,7 @@ if (SFP.cmdReceiver() != 0) {
 				SFP.frameStart("A0");
 					SFP.write((uint32_t)DATA_SIZE); // сначала отсылаем размер массива
 					SFP.write(Data1, DATA_SIZE * 4); // теперь сам массив data1 (int32_t) побайтно x4
-        SFP.frameEnd();
+        		SFP.frameEnd();
           
 				SFP.logPrint("Почему бы в следующем фрейме не отправить еще один массив данных uint16_t прификсом A1");
 				
@@ -107,7 +101,7 @@ if (SFP.cmdReceiver() != 0) {
 				//SFP.logPrint(F("fVoltage_A1_R9_3=") + String(fVoltageCapacitor, 2));
 				SFP.logPrint("000");
 				break;
-			}
-		SFP.cmdClear();
 	}
+	SFP.cmdClear();
+}
 }
