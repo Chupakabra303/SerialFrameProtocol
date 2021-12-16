@@ -1,4 +1,4 @@
-# Serial Frame Protocol
+# Serial Frame Protocol (SFP)
 Simple Serial Frame Protocol for Arduino, Teensy, etc.
 
 Публикую на суд публики свой простой и эффективный коммуникационный протокол Serial Frame Protocol для связи через последовательный порт с платформами, работающими под библиотекой Arduino по типу точка-точка.
