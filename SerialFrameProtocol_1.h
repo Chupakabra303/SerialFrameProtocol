@@ -213,7 +213,7 @@ bool SerialFrameProtocol::frameReceiver() {
 			break;
 		} else if (frameLength >= FRAME_BUFF_SIZE) {
 			;
-		}	else if (escapeStart) {
+		} else if (escapeStart) {
 			escapeStart = false;
 			if (ch == 'e')
 				ch = '\\';
