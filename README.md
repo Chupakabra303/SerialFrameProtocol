@@ -2,12 +2,10 @@
 Simple Serial Frame Protocol for Arduino, Teensy, etc.
 
 Пример мастера на Python 3.8.10
-![изображение](https://user-images.githubusercontent.com/15260953/146766663-4472c8eb-ccd1-4bd2-b814-3f4d3ff67891.png)
-
+![изображение](https://user-images.githubusercontent.com/15260953/146767523-906494bf-eba5-4ef9-b970-81a20fc1eb45.png)
 
 Пример мастера на Labview 2015
 ![изображение](https://user-images.githubusercontent.com/15260953/146767226-7c7100ab-bd7a-4066-914d-3cbcb7c103fe.png)
-
 
 Публикую на суд публики свой простой и эффективный коммуникационный протокол Serial Frame Protocol для связи через последовательный порт с платформами, работающими под библиотекой Arduino по типу точка-точка.
 Тестировал его работу на Arduino Mega 2560 и Teensy 3.5.
