@@ -4,10 +4,10 @@
 SerialFrameProtocol SFP(SFPport);
 
 void setup() {
-  SFPport.begin(57600);
-  delay(2000);
-  while (!SFPport && millis() < 1000);
-  SFP.logPrint("Serial инициализирован");
+	SFPport.begin(57600);
+	delay(2000);
+	while (!SFPport && millis() < 1000);
+	SFP.logPrint("Serial инициализирован");
 	//for (int i = 0; i < FRAME_BUFF_SIZE; ++i)
 	//	SFPport.print(SFP.frameBuffer[i], HEX);
 }
