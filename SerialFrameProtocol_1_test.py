@@ -166,7 +166,7 @@ Button(topFrame, text="CB\n(get iVal, fVal) ", width=15, height=2, command=lambd
     .grid(row=0, column=4)
 Button(topFrame, text="CA\n(get arrays)", width=15, height=2, command=lambda: sfp.write(b'CA'))\
     .grid(row=1, column=0)
-Button(topFrame, text="CA\n(send/get arrays)", width=15, height=2, command=lambda: sendArray(100))\
+Button(topFrame, text="CX\n(send/get arrays)", width=15, height=2, command=lambda: sendArray(100))\
     .grid(row=1, column=1)
 
 # clearButton.pack(side=BOTTOM, pady=5, padx=2)
