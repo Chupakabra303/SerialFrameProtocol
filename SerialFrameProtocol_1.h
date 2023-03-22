@@ -2,7 +2,7 @@
  * SerialFrameProtocol_1_1.h
  *
  *  Created on: 15.07.2021
- *      Author: Barbot A
+ *  Author: Barbot A.
  */
 
 #ifndef SERIALFRAMEPROTOCOL_H_
@@ -258,7 +258,7 @@ uint8_t SerialFrameProtocol::cmdReceiver() {
   if (frameReceiver()) {
     if (!frameError && frameLength >= (CHECK_LEN + 2) && frameBuffer[0] == 'C') {
       cmdQueue = frameBuffer[1];
-      cmdLength = frameLength;
+      cmdLength = frameLength - CHECK_LEN; // cmdLength = frameLength; // v1.2
     }
     frameClear();
   }
@@ -267,6 +267,7 @@ uint8_t SerialFrameProtocol::cmdReceiver() {
 
 void SerialFrameProtocol::cmdClear() {
   cmdQueue = 0;
+  cmdLength = 0; // v1.2
 }
 
 #endif
